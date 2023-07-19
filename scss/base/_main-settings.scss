@@ -1,0 +1,31 @@
+html {
+  font-size: 62.5%;
+
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  min-height: 100vh;
+
+  background:url(/GitHub-repositories/media/wallpapersden.com_mountain-retreat_5120x2880.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  scroll-behavior: smooth;
+}

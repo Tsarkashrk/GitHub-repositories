@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "PoppinsRegular";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Poppins Regular"), local("Poppins-Regular"),
+    url(/Kiramu/fonts/Poppins-Regular.woff2) format("woff2"),
+    url(/Kiramu/fonts/Poppins-Regular.woff) format("woff"),
+    url(/Kiramu/fonts/Poppins-Regular.eot) format("eot");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsMedium";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Poppins Medium"), local("Poppins-Medium"),
+    url(/Kiramu/fonts/Poppins-Medium.woff2) format("woff2"),
+    url(/Kiramu/fonts/Poppins-Medium.woff) format("woff"),
+    url(/Kiramu/fonts/Poppins-Medium.eot) format("eot");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsSemiBold";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Poppins SemiBold"), local("Poppins-SemiBold"),
+    url(/Kiramu/fonts/Poppins-SemiBold.woff2) format("woff2"),
+    url(/Kiramu/fonts/Poppins-SemiBold.woff) format("woff"),
+    url(/Kiramu/fonts/Poppins-SemiBold.eot) format("eot");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsBold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Poppins Bold"), local("Poppins-Bold"),
+    url(/Kiramu/fonts/Poppins-Bold.woff2) format("woff2"),
+    url(/Kiramu/fonts/Poppins-Bold.woff) format("woff"),
+    url(/Kiramu/fonts/Poppins-Bold.eot) format("eot");
+  font-display: swap;
+}
