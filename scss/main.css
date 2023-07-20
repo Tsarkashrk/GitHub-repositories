@@ -17,13 +17,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 20px;
-  background: url(/GitHub-repositories/media/wallpapersden.com_mountain-retreat_5120x2880.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 2.5rem;
+  background-color: #222831;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   scroll-behavior: smooth;
@@ -68,52 +63,71 @@ body {
 }
 
 .form {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  padding: 30px;
-  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 40rem;
+  padding: 3rem;
+  background-color: #393E46;
   border-radius: 2rem;
 }
-.form .form__title {
-  font-family: "PoppinsMedium", sans-serif;
+.form__title {
+  font-family: "PoppinsSemiBold", sans-serif;
   font-size: 3.2rem;
 }
-.form .form__group {
+.form__group {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
-.form .form__element {
+.form__element {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #FFFFFF;
+  width: 100%;
 }
-.form .form__text {
-  font-family: "PoppinsRegular", sans-serif;
-  font-size: 1.6rem;
+.form__icon {
+  position: absolute;
+  right: 5rem;
+  width: 2rem;
+  fill: #FFFFFF;
 }
-.form .form__input {
+.form__input {
+  width: 100%;
+  padding: 1.5rem 2rem;
   background-color: transparent;
-  border: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 10rem;
   outline: none;
   font-family: "PoppinsMedium", sans-serif;
   font-size: 1.5rem;
   color: white;
 }
+.form__input::placeholder {
+  color: #FFFFFF;
+}
+
+.button {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 10rem;
+  font-family: "PoppinsMedium", sans-serif;
+  font-size: 1.5rem;
+  color: #222831;
+  cursor: pointer;
+}
 
 .main {
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: center;
   width: 100%;
   max-width: 1240px;

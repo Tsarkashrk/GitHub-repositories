@@ -1,46 +1,62 @@
 .form {
+  position: relative;
+
   @include display-flex-primary;
   flex-direction: column;
-  gap: 2rem;  
+  gap: 2rem;
 
-  padding: 30px;
+  width: 40rem;
 
-  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
-  backdrop-filter: blur($glass-blur);
-  -webkit-backdrop-filter: blur($glass-blur);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 3rem;
+
+  background-color: $background-color-dark;
   border-radius: $border-radius-primary;
 
-  .form__title {
-    font-family: $poppins-medium;
+  &__title {
+    font-family: $poppins-semibold;
     font-size: $xl-font-size;
   }
 
-  .form__group {
+  &__group {
     @include display-flex-primary;
     flex-direction: column;
     gap: 2rem;
+
+    width: 100%;
   }
 
-  .form__element {
+  &__element {
     @include display-flex-primary;
 
-    border-bottom: 2px solid $main-color;
+    width: 100%;
   }
 
-  .form__text {
-    font-family: $poppins-regular;
-    font-size: $sm-font-size;
+  &__icon {
+    position: absolute;
+    right: 5rem;
+
+    width: 2rem;
+
+    fill: $primary-color;
   }
 
-  .form__input {
+  &__input {
+    width: 100%;
+
+    padding: 1.5rem 2rem;
+
     background-color: transparent;
-    border: none;
+    border: 1px solid $primary-color;
+    border-radius: 10rem;
     outline: none;
 
     font-family: $poppins-medium;
     font-size: $xs-font-size;
 
     color: white;
+
+    &::placeholder {
+      color: $primary-color;
+    }
   }
 }
