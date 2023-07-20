@@ -1,6 +1,6 @@
 html {
   font-size: 62.5%;
-  color: white;
+  color: #FFFFFF;
 }
 
 * {
@@ -12,7 +12,12 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
   background: url(/GitHub-repositories/media/wallpapersden.com_mountain-retreat_5120x2880.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -51,4 +56,67 @@ body {
   font-style: normal;
   src: local("Poppins Bold"), local("Poppins-Bold"), url(/Kiramu/fonts/Poppins-Bold.woff2) format("woff2"), url(/Kiramu/fonts/Poppins-Bold.woff) format("woff"), url(/Kiramu/fonts/Poppins-Bold.eot) format("eot");
   font-display: swap;
+}
+.header {
+  align-self: start;
+}
+.header__logo {
+  font-family: "PoppinsBold", sans-serif;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 30px;
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+}
+.form .form__title {
+  font-family: "PoppinsMedium", sans-serif;
+  font-size: 3.2rem;
+}
+.form .form__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form .form__element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #FFFFFF;
+}
+.form .form__text {
+  font-family: "PoppinsRegular", sans-serif;
+  font-size: 1.6rem;
+}
+.form .form__input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "PoppinsMedium", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+  overflow: auto;
 }/*# sourceMappingURL=main.css.map */

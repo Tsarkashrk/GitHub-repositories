@@ -1,0 +1,46 @@
+.form {
+  @include display-flex-primary;
+  flex-direction: column;
+  gap: 2rem;  
+
+  padding: 30px;
+
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur($glass-blur);
+  -webkit-backdrop-filter: blur($glass-blur);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: $border-radius-primary;
+
+  .form__title {
+    font-family: $poppins-medium;
+    font-size: $xl-font-size;
+  }
+
+  .form__group {
+    @include display-flex-primary;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .form__element {
+    @include display-flex-primary;
+
+    border-bottom: 2px solid $main-color;
+  }
+
+  .form__text {
+    font-family: $poppins-regular;
+    font-size: $sm-font-size;
+  }
+
+  .form__input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    font-family: $poppins-medium;
+    font-size: $xs-font-size;
+
+    color: white;
+  }
+}

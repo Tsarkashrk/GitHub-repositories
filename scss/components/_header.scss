@@ -1,0 +1,12 @@
+.header {
+  align-self: start;
+
+  &__logo {
+    font-family: $poppins-bold;
+    font-size: $lg-font-size;
+
+    color: $main-color;
+
+    cursor: pointer;
+  }
+}

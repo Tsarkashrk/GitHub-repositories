@@ -1,0 +1,23 @@
+@mixin display-flex-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin display-flex-secondary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin display-flex-thirdly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin display-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

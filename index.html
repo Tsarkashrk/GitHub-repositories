@@ -8,14 +8,27 @@
 </head>
 <body>
   <header class="header">
-    <p class="header__logo">GITHUB repositories</p>
+    <a class="header__logo" href="#">GHREPO</a>
   </header>
   <main class="main">
     <form class="form" action="">
       <p class="form__title">Login</p>
-      <input class="form__login" type="text">
-      <input class="form__password" type="text">
+      <div class="form__group">
+        <div class="form__element">
+          <p class="form__text">Username</p>
+          <input class="form__input" type="text">
+        </div>
+        <div class="form__element">
+          <p class="form__text">Password</p>
+          <input class="form__input" type="text">
+        </div>
+      </div>
+      <button class="button">Login</button>
     </form>
   </main>
+
+  <script src="./script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

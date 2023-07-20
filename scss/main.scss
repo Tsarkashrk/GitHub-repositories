@@ -1,2 +1,18 @@
+// Abstracts
+
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+// Base
+
 @import "./base/main-settings";
 @import "./base/typography";
+
+// Components
+
+@import "./components/header";
+@import "./components/form";
+
+// Layouts
+
+@import "./layouts/main";
