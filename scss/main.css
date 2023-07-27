@@ -96,7 +96,11 @@ body {
   position: absolute;
   right: 5rem;
   width: 2rem;
+  font-size: 2rem;
   fill: #FFFFFF;
+}
+.form__icon--secondary {
+  cursor: pointer;
 }
 .form__input {
   width: 100%;
@@ -121,16 +125,26 @@ body {
   border-radius: 10rem;
   font-family: "PoppinsMedium", sans-serif;
   font-size: 1.5rem;
+  text-align: center;
   color: #222831;
   cursor: pointer;
 }
 
 .main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 1240px;
   height: 100%;
   overflow: auto;
+}
+.main__title {
+  font-family: "PoppinsBold", sans-serif;
+  font-size: 15rem;
+}
+.main__description {
+  font-family: "PoppinsSemiBold", sans-serif;
+  font-size: 3.2rem;
 }/*# sourceMappingURL=main.css.map */

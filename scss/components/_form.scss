@@ -37,7 +37,13 @@
 
     width: 2rem;
 
+    font-size: $xm-font-size;
+
     fill: $primary-color;
+
+    &--secondary {
+      cursor: pointer;
+    }
   }
 
   &__input {
