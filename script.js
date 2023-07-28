@@ -1,43 +1,73 @@
 const main = document.querySelector('.main');
 
-const showPassword = () => {
-  const password = document.getElementById('form__password');
-  const eyeIcon = document.querySelector(".form__icon--secondary");
-
-  if (password.type === "password") {
-    password.type = "text";
-    eyeIcon.name = "eye";
-  }
-  else {
-    password.type = "password";
-    eyeIcon.name = "eye-off";
-  }
+const accountData = {
+  username: 'Tsarka',
+  password: '123'
 }
 
-const isCorrectData = () => {
-  const form = document.getElementById('form');
+let isAuthorized = 'false';
+localStorage.setItem('isAuthorized', isAuthorized);
 
-  const username = document.getElementById('form__username');
-  const password = document.getElementById('form__password');
+if (localStorage.getItem('isAuthorized') === 'false') {
+  main.innerHTML = `
+      <form class="form" action="">
+        <p class="form__title">Login</p>
+          <div class="form__group">
+            <div class="form__element">
+              <input class="form__input form__username" type="text" placeholder="Username" required>
+              <ion-icon class="form__icon" name="person"></ion-icon>
+            </div>
+            <div class="form__element">
+              <input class="form__input form__password" id="myPassword" type="password" placeholder="Password" required>
+              <ion-icon class="form__icon form__icon--secondary" onclick="showPassword()" name="eye-off"></ion-icon>
+            </div>
+          </div>
+        <button type="button" class="button" onclick="authorization()">Login</button>
+      </form>
+    `
+  isAuthorized = 'true';
+  localStorage.setItem('isAuthorized', isAuthorized)
+}
+else {
+  createSearcher();
+}
 
-  if (username.value === "Tsarka" && password.value === "123456") {
-    main.innerHTML = ``;
+const authorization = () => {
+  const username = document.querySelector('.form__username');
+  const password = document.querySelector('.form__password')
+
+  if (username.value === accountData.username && password.value === accountData.password) {
+    main.innerHTML = '';
     createSearcher();
   }
   else {
-    alert("Incorrect username or password");
+    alert('Incorrect username or password');
+  }
+}
+
+const showPassword = () => {
+  const password = document.querySelector('.form__password');
+  const eyeIcon = document.querySelector('.form__icon--secondary');
+
+  if (password.type === 'password') {
+    password.type = 'text';
+    eyeIcon.name = 'eye';
+  }
+  else {
+    password.type = 'password';
+    eyeIcon.name = 'eye-off';
   }
 }
 
 const createSearcher = () => {
   const form = document.createElement('form');
   form.classList.add('searcher');
-  form.addEventListener('submit', (event) => {
-    event.preventDefault;
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
     const inputsValue = Object.fromEntries(new FormData(event.target));
 
-    const response = fetch(`https://api.github.com/users/${inputsValue.name}`);
+    const response = await fetch(`https://api.github.com/users/${inputsValue.name}`);
     console.log(response);
   });
 
