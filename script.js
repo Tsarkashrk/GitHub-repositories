@@ -25,8 +25,6 @@ if (localStorage.getItem('isAuthorized') === 'false') {
         <button type="button" class="button" onclick="authorization()">Login</button>
       </form>
     `
-  isAuthorized = 'true';
-  localStorage.setItem('isAuthorized', isAuthorized)
 }
 else {
   createSearcher();
@@ -37,6 +35,8 @@ const authorization = () => {
   const password = document.querySelector('.form__password')
 
   if (username.value === accountData.username && password.value === accountData.password) {
+    isAuthorized = 'true';
+    localStorage.setItem('isAuthorized', isAuthorized);
     main.innerHTML = '';
     createSearcher();
   }
@@ -62,13 +62,16 @@ const showPassword = () => {
 const createSearcher = () => {
   const form = document.createElement('form');
   form.classList.add('searcher');
-  form.addEventListener('submit', async (event) => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const inputsValue = Object.fromEntries(new FormData(event.target));
+    async function fetchUsers() {
+      const inputsValue = Object.fromEntries(new FormData(event.target));
+      const response = await (await fetch(`https://api.github.com/users/${inputsValue.name}/repos`)).json();
+      console.log(response);
+    }
 
-    const response = await fetch(`https://api.github.com/users/${inputsValue.name}`);
-    console.log(response);
+    fetchUsers();
   });
 
   const input = document.createElement('input');
