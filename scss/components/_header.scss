@@ -1,5 +1,13 @@
 .header {
-  align-self: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+
+  width: 100%;
+  max-width: $max-width-primary;
+
+  margin: 0 auto;
 
   &__logo {
     font-family: $poppins-bold;

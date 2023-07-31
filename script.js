@@ -1,4 +1,5 @@
 const main = document.querySelector('.main');
+const header = document.querySelector('.header');
 
 const accountData = {
   username: 'Tsarka',
@@ -25,6 +26,8 @@ if (localStorage.getItem('isAuthorized') === 'false') {
         <button type="button" class="button" onclick="authorization()">Login</button>
       </form>
     `
+    isAuthorized = 'true';
+    localStorage.setItem('isAuthorized', isAuthorized);
 }
 else {
   createSearcher();
@@ -57,7 +60,7 @@ const showPassword = () => {
     password.type = 'password';
     eyeIcon.name = 'eye-off';
   }
-}
+} 
 
 const createSearcher = () => {
   const form = document.createElement('form');
@@ -68,7 +71,17 @@ const createSearcher = () => {
     async function fetchUsers() {
       const inputsValue = Object.fromEntries(new FormData(event.target));
       const response = await (await fetch(`https://api.github.com/users/${inputsValue.name}/repos`)).json();
-      console.log(response);
+
+      main.innerHTML = '';
+      const repo = document.createElement('div');
+      repo.classList.add('repo');
+      main.appendChild(repo);
+
+      for (let i = 0; i < response.length; i++) {
+        repo.innerHTML += `
+          <p class="repo__element">${response[i].name}</p>
+        `
+      }
     }
 
     fetchUsers();
@@ -77,13 +90,18 @@ const createSearcher = () => {
   const input = document.createElement('input');
   input.classList.add('searcher__input');
   input.setAttribute('name', 'name');
+  input.setAttribute('placeholder', 'Search');
 
   const button = document.createElement('button');
   button.classList.add('searcher__button');
   button.setAttribute('type', 'submit');
-  button.innerHTML = "Search";
+  button.innerHTML = '';
+
+  const icon = document.createElement('ion-icon');
+  icon.classList.add('searcher__icon');
+  icon.name = 'search';
 
   form.appendChild(input);
   form.appendChild(button);
-  main.appendChild(form);
+  header.appendChild(form);
 }

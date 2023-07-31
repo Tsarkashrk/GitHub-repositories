@@ -6,9 +6,8 @@
 
   width: 100%;
   max-width: $max-width-primary;
-  height: 100%;
-  
-  overflow: auto;
+
+  margin: 0 auto;
 
   &__title {
     font-family: $poppins-bold;

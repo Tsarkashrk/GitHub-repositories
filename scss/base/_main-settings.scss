@@ -15,13 +15,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  height: 100vh;
-
   padding: 1.5rem 2.5rem;
 
   background-color: $background-color;

@@ -12,13 +12,8 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   padding: 1.5rem 2.5rem;
-  background-color: #222831;
+  background-color: #1a1a1d;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   scroll-behavior: smooth;
@@ -53,7 +48,13 @@ body {
   font-display: swap;
 }
 .header {
-  align-self: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 .header__logo {
   font-family: "PoppinsBold", sans-serif;
@@ -71,7 +72,8 @@ body {
   gap: 2rem;
   width: 40rem;
   padding: 3rem;
-  background-color: #393E46;
+  background-color: #1a1a1d;
+  border: 2px solid #c3073f;
   border-radius: 2rem;
 }
 .form__title {
@@ -106,7 +108,7 @@ body {
   width: 100%;
   padding: 1.5rem 2rem;
   background-color: transparent;
-  border: 1px solid #FFFFFF;
+  border: 2px solid #c3073f;
   border-radius: 10rem;
   outline: none;
   font-family: "PoppinsMedium", sans-serif;
@@ -120,14 +122,58 @@ body {
 .button {
   width: 100%;
   padding: 1.5rem;
-  background-color: #FFFFFF;
+  background-color: #c3073f;
   border: none;
   border-radius: 10rem;
   font-family: "PoppinsMedium", sans-serif;
   font-size: 1.5rem;
   text-align: center;
-  color: #222831;
+  color: #FFFFFF;
   cursor: pointer;
+}
+
+.repo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin: 2rem 0;
+  font-family: "PoppinsRegular", sans-serif;
+  font-size: 1.6rem;
+}
+.repo__element {
+  padding: 2rem;
+  border: 2px solid #c3073f;
+  border-radius: 2rem;
+}
+
+.searcher {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.searcher__input {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background-color: transparent;
+  border: 2px solid #c3073f;
+  border-radius: 3rem;
+  font-family: "PoppinsRegular", sans-serif;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  outline: none;
+}
+.searcher__input::placeholder {
+  color: #FFFFFF;
+}
+.searcher__button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
 .main {
@@ -137,8 +183,7 @@ body {
   justify-content: center;
   width: 100%;
   max-width: 1240px;
-  height: 100%;
-  overflow: auto;
+  margin: 0 auto;
 }
 .main__title {
   font-family: "PoppinsBold", sans-serif;

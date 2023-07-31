@@ -9,7 +9,9 @@
 
   padding: 3rem;
 
-  background-color: $background-color-dark;
+  background-color: $background-color;
+
+  border: 2px solid $secondary-color-lighter;
   border-radius: $border-radius-primary;
 
   &__title {
@@ -52,7 +54,7 @@
     padding: 1.5rem 2rem;
 
     background-color: transparent;
-    border: 1px solid $primary-color;
+    border: $border-primary;
     border-radius: 10rem;
     outline: none;
 

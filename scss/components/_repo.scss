@@ -1,0 +1,19 @@
+.repo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: 100%;
+
+  margin: 2rem 0;
+
+  font-family: $poppins-regular;
+  font-size: $sm-font-size;
+
+  &__element {
+    padding: 2rem;
+
+    border: $border-primary;
+    border-radius: 2rem;
+  }
+}
